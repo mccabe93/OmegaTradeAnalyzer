@@ -1,0 +1,396 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\mmcca\\source\\repos\\OmegaTradeAnalyzer\\OmegaPostProcessor\\bin\\Debug\\net8.0\\Data\\analysis.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Profitable",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Risk",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Premium",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "OpeningVIX",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "MostOTM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "LeastOTM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "AverageOTM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.656821682949708,
+        "RuntimeInSeconds": 0.645,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "Profitable",
+            "InputColumnName": "Profitable",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 7,
+            "NumberOfTrees": 6,
+            "MaximumBinCountPerFeature": 448,
+            "FeatureFraction": 0.487723916487607,
+            "LearningRate": 0.19142730943714831,
+            "LabelColumnName": "Profitable",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.65760047342798633,
+        "RuntimeInSeconds": 0.716,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "Profitable",
+            "InputColumnName": "Profitable",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 6,
+            "NumberOfTrees": 22,
+            "MaximumBinCountPerFeature": 547,
+            "FeatureFraction": 0.44192260221538943,
+            "LearningRate": 0.073069157990469674,
+            "LabelColumnName": "Profitable",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.65832352470957589,
+        "RuntimeInSeconds": 0.598,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "Profitable",
+            "InputColumnName": "Profitable",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 8,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 366,
+            "FeatureFraction": 0.54276652291022842,
+            "LearningRate": 0.46471017468649578,
+            "LabelColumnName": "Profitable",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.6584821570869871,
+        "RuntimeInSeconds": 0.583,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "Profitable",
+            "InputColumnName": "Profitable",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 10,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 388,
+            "FeatureFraction": 0.52131505092273023,
+            "LearningRate": 0.39968038967483943,
+            "LabelColumnName": "Profitable",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.65855571719160388,
+        "RuntimeInSeconds": 0.516,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Risk",
+              "Premium",
+              "OpeningVIX",
+              "MostOTM",
+              "LeastOTM",
+              "AverageOTM"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "Profitable",
+            "InputColumnName": "Profitable",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 5,
+            "NumberOfTrees": 10,
+            "MaximumBinCountPerFeature": 155,
+            "FeatureFraction": 0.73284724476836316,
+            "LearningRate": 0.22294865689526711,
+            "LabelColumnName": "Profitable",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * e4",
+    "MetricName": "LogLoss",
+    "ModelFilePath": "C:\\Users\\mmcca\\source\\repos\\OmegaTradeAnalyzer\\OmegaTradeAnalyzer\\OmegaAnalyzer.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 60,
+    "OptimizeMetric": "LogLoss",
+    "LabelColumn": "Profitable",
+    "AvailableTrainers": [
+      "FASTTREE"
+    ],
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

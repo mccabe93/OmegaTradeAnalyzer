@@ -1,0 +1,3 @@
+{
+  "IncludeColumns": [ "Profitable", "Risk", "Premium", "OpeningVIX", "MostOTM", "LeastOTM", "AverageOTM" ]
+}
